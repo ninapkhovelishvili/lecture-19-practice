@@ -36,7 +36,7 @@ $light-gray: #767676;
     width: 1140px;
     margin: auto;
 
-    @media only screen and (max-width: 1024px){
+    @media only screen and (max-width: 1300px){
         width: 100%;
      }
 }
@@ -309,6 +309,11 @@ $light-gray: #767676;
             padding-right: 30px;
         }
 
+        @media only screen and (max-width: 1300px){
+            padding-left: 30px;
+            padding-right: 30px;
+         }
+
 
         .about-header{
             width: 100%;
@@ -518,6 +523,7 @@ $light-gray: #767676;
         align-items: center;
         padding-left: 15px;
         padding-right: 15px;
+
 
         @media only screen and (max-width: 1024px){
             flex-wrap: wrap;
@@ -885,6 +891,11 @@ $light-gray: #767676;
     width: 100%;
     padding-bottom: 9rem;
 
+    @media only screen and (max-width: 1300px){
+        padding-left: 30px;
+        padding-right: 30px;
+     }
+
     @media only screen and (max-width: 768px){
         padding-bottom: 4rem;
     }
@@ -1021,10 +1032,15 @@ $light-gray: #767676;
                 height: 435px;
                 @include column();
 
-                @media only screen and (max-width: 1024px){
+                @media only screen and (max-width: 1300px){
+                    margin: 30px;
                     width: 100%;
-                    margin-bottom: 30px;
                  }
+
+                // @media only screen and (max-width: 1024px){
+                //     width: 100%;
+                //     margin-bottom: 30px;
+                //  }
 
 
                 .top{
@@ -1035,7 +1051,7 @@ $light-gray: #767676;
                     position: relative;
                     transition: 0.5s;
 
-                    @media only screen and (max-width: 1024px){
+                    @media only screen and (max-width: 1300px){
                         
                         background-size: cover;
                      }
@@ -1055,6 +1071,7 @@ $light-gray: #767676;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        text-align: center;
                         position: absolute;
                         bottom: 0;
                         left: 20px;
