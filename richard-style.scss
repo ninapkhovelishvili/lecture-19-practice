@@ -35,6 +35,10 @@ $light-gray: #767676;
 .container{
     width: 1140px;
     margin: auto;
+
+    @media only screen and (max-width: 1024px){
+        width: 100%;
+     }
 }
 
 .background-image{
@@ -42,6 +46,10 @@ $light-gray: #767676;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
+    // @media only screen and (max-width: 768px){
+    //             background-size: contain;
+    // }
 }
 
 .header-section{
@@ -52,6 +60,14 @@ $light-gray: #767676;
     position: fixed;
     z-index: 9;
 
+    @media only screen and (max-width: 1024px){
+        height: 100px;
+     }
+
+     @media only screen and (max-width: 768px){
+         height: 60px;
+     }
+
     .header-section-items{
         display: flex;
         justify-content: space-between;
@@ -59,12 +75,27 @@ $light-gray: #767676;
         margin-right: 50px;
         margin-left: 50px;
 
+         @media only screen and (max-width: 1024px){
+            justify-content: center;
+            @include column();
+         }
+
+
         .left{
             width: 700px;
             height: 75px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            @media only screen and (max-width: 1024px){
+                height: 60px;
+             }
+
+             @media only screen and (max-width: 768px){
+                 justify-content: center;
+                 align-items: center;
+             }
 
             .logo{
                 width: 129px;
@@ -84,6 +115,11 @@ $light-gray: #767676;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @media only screen and (max-width: 768px){
+                    display: none;
+                }
+                
                 
                 ul{
                     width: 500px;
@@ -116,6 +152,10 @@ $light-gray: #767676;
         .right{
             width: 150px;
 
+            @media only screen and (max-width: 768px){
+                display: none;
+            }
+
             ul{
                 width: 100%;
                 list-style-type: none;
@@ -141,6 +181,10 @@ $light-gray: #767676;
 .slider-section{
     width: 100%;
     padding-top: 75px;
+
+    @media only screen and (max-width: 768px){
+        padding-top: 60px;
+    }
     
     .slider-section-items{
         width: 800px;
@@ -149,6 +193,14 @@ $light-gray: #767676;
         justify-items: left;
         margin-top: 50px;
 
+        @media only screen and (max-width: 1024px){
+            width: 100%;
+         }
+
+         @media only screen and (max-width: 768px){
+                height: 100%;      
+        }
+
         .item{
             width: 450px;
             height: 600px;
@@ -156,6 +208,21 @@ $light-gray: #767676;
             flex-direction: column;
             justify-content: center;
             align-items: left;
+            padding-left: 20px;
+
+            @media only screen and (max-width: 768px){
+                width: 300px;
+            }
+
+            @media only screen and (max-width: 768px){
+                height: 100%;
+                margin-bottom: 80px;
+            }
+            @media only screen and (max-width: 576px){
+                width: 180px;
+                padding-bottom: 30px;
+            }
+
 
             h1{
                 font-size: 4.125rem;
@@ -163,6 +230,15 @@ $light-gray: #767676;
                 line-height: 1.05;
                 color: $black;
                 margin-bottom: .5rem;
+
+                @media only screen and (max-width: 768px){
+                    font-size: 2rem;
+                }
+
+                @media only screen and (max-width: 576px){
+                    font-size: 1rem;
+                }
+                
             }
 
             p{
@@ -172,6 +248,14 @@ $light-gray: #767676;
                 margin-top: 1.5rem;
                 font-weight: 300;
                 color: #767676;
+
+                @media only screen and (max-width: 768px){
+                    font-size: 1rem;
+                }
+
+                @media only screen and (max-width: 576px){
+                    font-size: .8rem;
+                }
             }
 
             .button{
@@ -186,6 +270,13 @@ $light-gray: #767676;
                 text-transform: uppercase;
                 border: 1px solid #23a592;
                 outline: none;
+
+                @media only screen and (max-width: 768px){
+                    width: 120px;
+                    height: 40px;
+                    border-radius: 20px;
+                    font-size: .7rem;
+                }
 
                 &:hover{
                     background-color: white;
@@ -211,10 +302,26 @@ $light-gray: #767676;
         align-items: center;
         justify-content: center;
 
+        @media only screen and (max-width: 576px){
+            padding-top: 80px;
+            padding-bottom: 80px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+
         .about-header{
             width: 100%;
             height: 40px;
             margin-bottom: 30px;
+
+            @media only screen and (max-width: 1024px){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 20px;
+                padding-right: 20px;
+             }
 
             h2{
                 text-align: left;
@@ -232,15 +339,34 @@ $light-gray: #767676;
             display: flex;
             justify-content: space-between;
 
+            @media only screen and (max-width: 1024px){
+                @include column();
+                justify-content: center;
+                align-items: center;
+             }
+
             .left-item{
                 width: 475px;
                 // height: 225px;
                 @include column();
 
+                @media only screen and (max-width: 1024px){
+                   margin-bottom: 50px;
+                 }
+
+                 @media only screen and (max-width: 576px){
+                     width: 100%;
+                 }
+
                 .p-text{
                     width: 100%;
                     height: 51px;
                     margin-bottom: 30px;
+
+                    
+                    @media only screen and (max-width: 576px){
+                        margin-bottom: 30px;
+                    }
 
                     P{
                         font-size: 1rem;
@@ -272,6 +398,7 @@ $light-gray: #767676;
                         @include column();
                         justify-content: center;
 
+
                         span{
                             margin-left: 1.5rem;
                             text-align: left;
@@ -290,10 +417,18 @@ $light-gray: #767676;
                 width: 475px;
                 @include column();
 
+                @media only screen and (max-width: 576px){
+                    width: 100%;
+                }
+
                 .progress-item{
                     width: 445px;
                     @include column();
                     margin-bottom: 20px;
+
+                    @media only screen and (max-width: 576px){
+                        width: 100%;
+                    }
 
                     h6{
                       font-size: 0.9rem;
@@ -309,6 +444,10 @@ $light-gray: #767676;
                         width: 445px;
                         height: 30px;
                         display: flex;
+
+                        @media only screen and (max-width: 576px){
+                            width: 100%;
+                        }
 
                         .green-line{
                             width: 50%;
@@ -326,6 +465,10 @@ $light-gray: #767676;
                         height: 30px;
                         display: flex;
 
+                        @media only screen and (max-width: 576px){
+                            width: 100%;
+                        }
+
                         .green-line{
                             width: 65%;
                             @include green-line();
@@ -341,6 +484,10 @@ $light-gray: #767676;
                         width: 445px;
                         height: 30px;
                         display: flex;
+
+                        @media only screen and (max-width: 576px){
+                            width: 100%;
+                        }
 
                         .green-line{
                             width: 95%;
@@ -369,6 +516,14 @@ $light-gray: #767676;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media only screen and (max-width: 1024px){
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+         }
 
         .item{
             width: 340px;
@@ -378,6 +533,12 @@ $light-gray: #767676;
             justify-content: center;
             align-items: left;
             color: white;
+
+            @media only screen and (max-width: 1024px){
+                width: 100%;
+                height: 100%;
+                margin: 20px;
+            }
 
             i{
                 font-size: 3.8rem;
@@ -407,6 +568,13 @@ $light-gray: #767676;
     width: 100%;
     padding: 9rem;
 
+    @media only screen and (max-width: 900px){
+        padding-left: 30px;
+        padding-right: 30px;
+     }
+
+
+
     .experience-section-items{
         width: 100%;
         @include column();
@@ -421,9 +589,21 @@ $light-gray: #767676;
             padding-left: 15px;
             padding-right: 15px;
 
+            
+            @media only screen and (max-width: 576px){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+            }
+
             .experience{
                 width: 570px;
                 height: 40px;
+
+                @media only screen and (max-width: 900px){
+                    width: 100%;
+                 }
 
                 h2{
                     font-size: 2.1rem;
@@ -439,6 +619,10 @@ $light-gray: #767676;
                 height: 40px;
                 text-align: right;
                 margin-top: 15px;
+
+                @media only screen and (max-width: 900px){
+                    width: 100%;
+                 }
 
                 a{
                     font-size: 0.9rem;
@@ -463,6 +647,8 @@ $light-gray: #767676;
             padding-left: 15px;
             padding-right: 15px;
 
+
+
             .light{
                 width: 100%;
                 height: 140px;
@@ -470,6 +656,13 @@ $light-gray: #767676;
                 grid-template-columns: 1fr 1fr 1fr;
                 padding-left: 15px;
                 padding-right: 15px;
+
+                @media only screen and (max-width: 900px){
+                    grid-template-columns: none;
+                    height: 100%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                  }
 
                 .title{
                     @include column();
@@ -481,7 +674,6 @@ $light-gray: #767676;
                         letter-spacing: 1px;
                         line-height: 1.2;
                         color: $light-gray;
-
                     }
 
                     h5{
@@ -496,6 +688,10 @@ $light-gray: #767676;
                 .position{
                     @include column();
                     justify-content: center;
+
+                    @media only screen and (max-width: 900px){
+                        padding-top: 15px;
+                      }
 
                     h5{
                         font-size: 1.125rem;
@@ -516,6 +712,10 @@ $light-gray: #767676;
                     display: flex;
                     align-items: center;
 
+                    @media only screen and (max-width: 900px){
+                        padding-top: 15px;
+                      }
+
                     p{
                         font-size: 1rem;
                         line-height: 1.625rem;
@@ -530,9 +730,18 @@ $light-gray: #767676;
                 background-color:#f4f4f4;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                @media only screen and (max-width: 900px){
+                    grid-template-columns: none;
+                    margin-top: 10px;
+                    height: 100%;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                  }
 
                 .title{
-                    padding-left: 15px;
                     @include column();
                     justify-content: center;
 
@@ -557,6 +766,10 @@ $light-gray: #767676;
                 .position{
                     @include column();
                     justify-content: center;
+
+                    @media only screen and (max-width: 900px){
+                        padding-top: 20px;
+                      }
                     
                     h5{
                         font-size: 1.125rem;
@@ -576,6 +789,10 @@ $light-gray: #767676;
                 .description{
                     display: flex;
                     align-items: center;
+
+                    @media only screen and (max-width: 900px){
+                        padding-top: 20px;
+                      }
 
                     p{
                         font-size: 1rem;
@@ -610,6 +827,10 @@ $light-gray: #767676;
                 width: 570px;
                 height: 40px;
 
+                @media only screen and (max-width: 1024px){
+                    width: 100%;
+                 }
+
                 h2{
                     font-size: 2.1rem;
                     font-weight: 700;
@@ -624,6 +845,10 @@ $light-gray: #767676;
                 height: 40px;
                 text-align: right;
                 margin-top: 15px;
+
+                @media only screen and (max-width: 1024px){
+                    width: 100%;
+                 }
 
                 a{
                     font-size: 0.9rem;
@@ -648,9 +873,8 @@ $light-gray: #767676;
             padding-left: 15px;
             padding-right: 15px;
 
-            .carousel{
+            img{
                 width: 100%;
-                height: 625px;
             }
         }
     }
@@ -661,6 +885,10 @@ $light-gray: #767676;
     width: 100%;
     padding-bottom: 9rem;
 
+    @media only screen and (max-width: 768px){
+        padding-bottom: 4rem;
+    }
+
     .items{
         width: 100%;
         display: flex;
@@ -668,12 +896,22 @@ $light-gray: #767676;
         padding-left: 15px;
         padding-right: 15px;
 
+        @media only screen and (max-width: 768px){
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
         .item{
             width: 420px;
             // height: 317px;
             @include column();
             justify-content: center;
             position: relative;
+
+            @media only screen and (max-width: 768px){
+                width: 100%;
+            }
 
             h2{
                 font-size: 13rem;
@@ -714,6 +952,11 @@ $light-gray: #767676;
     width: 100%;
     padding: 9rem;
     background-color: #f5f5f5;
+
+    @media only screen and (max-width: 768px){
+        padding-left: 30px;
+        padding-right: 30px;
+     }
 
     .latest-news-items{
         width: 100%;
@@ -769,10 +1012,20 @@ $light-gray: #767676;
             display: flex;
             justify-content: space-between;
 
+            @media only screen and (max-width: 1024px){
+               flex-wrap: wrap;
+             }
+
             .item{
                 width: 350px;
                 height: 435px;
                 @include column();
+
+                @media only screen and (max-width: 1024px){
+                    width: 100%;
+                    margin-bottom: 30px;
+                 }
+
 
                 .top{
                     width: 100%;
@@ -781,6 +1034,11 @@ $light-gray: #767676;
                     background-position: center center;
                     position: relative;
                     transition: 0.5s;
+
+                    @media only screen and (max-width: 1024px){
+                        
+                        background-size: cover;
+                     }
 
                     &:hover{
                         opacity: .7;
@@ -847,6 +1105,12 @@ $light-gray: #767676;
         display: flex;
         justify-content: space-between;
 
+        @media only screen and (max-width: 900px){
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
         .item{
             width: 285px;
             height: 157px;
@@ -855,6 +1119,10 @@ $light-gray: #767676;
             background-position: center center; 
             opacity: .6;
             transition: 0.5s;
+
+            @media only screen and (max-width: 1024px){
+               margin-right: 20px;
+            }
 
             &:hover{
                 opacity: 1;
@@ -874,6 +1142,12 @@ $light-gray: #767676;
         justify-content: space-between;
         padding-left: 15px;
         padding-right: 15px;
+
+        @media only screen and (max-width: 900px){
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
 
         .item{
             width: 285px;
